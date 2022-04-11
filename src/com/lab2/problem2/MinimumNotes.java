@@ -2,7 +2,7 @@ package com.lab2.problem2;
 
 import java.util.Scanner;
 
-public class Money {
+public class MinimumNotes {
 	public static void main(String[] args) {
 		Scanner in = new Scanner(System.in);
 
@@ -17,8 +17,6 @@ public class Money {
 		}
 
 		sort(denominations, true); // sort([], desc) --- merge sort impl
-
-		printArray(denominations);
 
 		System.out.println("Enter the amount you want to pay");
 		int amount = in.nextInt();
@@ -62,23 +60,6 @@ public class Money {
 		}
 	}
 
-//	private static void payMinimumNotes(int[] denominations, int amount) {
-//		boolean isEligibleDenomination = false;
-//		for (int i = 0; i < denominations.length; i++) {
-//			int count = 0;
-//			int denomination = denominations[i];
-//			while (amount - denomination >= 0) {
-//				isEligibleDenomination = true;
-//				count++;
-//				amount = amount - denomination;
-//			}
-//			if (isEligibleDenomination) {
-//				System.out.println(denominations[i] + ":" + count);
-//				isEligibleDenomination = false;
-//			}
-//		}
-//	}
-
 	private static void sort(int[] array, boolean desc) {
 		sort(array, 0, array.length - 1, desc);
 	}
@@ -121,15 +102,5 @@ public class Money {
 		while (i < n2) {
 			array[k++] = rightArray[j++];
 		}
-	}
-
-	private static void printArray(int[] array) {
-		System.out.println("---");
-		System.out.println("sorted array: ");
-		for (int e : array) {
-			System.out.print(e + " ");
-		}
-		System.out.println();
-		System.out.println("---");
 	}
 }

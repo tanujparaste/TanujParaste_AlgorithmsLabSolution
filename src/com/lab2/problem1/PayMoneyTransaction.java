@@ -1,10 +1,5 @@
 package com.lab2.problem1;
 
-/*
- * Time complexity
- * Worst case: O(n^2) 
- */
-
 import java.util.Scanner;
 
 public class PayMoneyTransaction {
